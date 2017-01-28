@@ -32,7 +32,7 @@ describe './bin/move executing a CLI Application' do
     allow($stdout).to receive(:puts)
 
     allow(self).to receive(:gets).and_return("1")
-    
+
     expect(self).to receive(:input_to_index).and_return(0)
 
     run_file("./bin/move")
@@ -42,7 +42,7 @@ describe './bin/move executing a CLI Application' do
 
     allow($stdout).to receive(:puts)
 
-    allow(self).to receive(:gets).and_return('1')
+    allow(self).to receive(:gets).and_return("1")
     expect(self).to receive(:move).with(anything, 0, any_args), "Make sure `bin/move` is passing the index, not the input to the `#move` method."
 
     run_file("./bin/move")

@@ -7,3 +7,18 @@ def display_board(board)
 end
 
 # code your input_to_index and move method here!
+def input_to_index(move_cell)
+  x = move_cell.to_i
+  if x > 0
+    return move_cell.to_i - 1
+  elsif x == 0
+    return -1
+  else
+    return 0
+  end
+end
+
+def move(board, index, player = "X")
+  board[index] = "#{player}"
+  return board
+end

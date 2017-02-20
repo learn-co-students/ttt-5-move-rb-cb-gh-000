@@ -7,3 +7,11 @@ def display_board(board)
 end
 
 # code your input_to_index and move method here!
+def input_to_index(input)
+  num = input.to_i
+  num - 1
+end
+
+def move(array, index, player="X")
+  array[index.to_i] = player
+end

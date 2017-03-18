@@ -1,5 +1,12 @@
 #!/usr/bin/env ruby
 
 require_relative '../lib/move.rb'
+board = [" "," "," "," "," "," "," "," "," "]
+puts "Welcome to Tic Tac Toe!"
+puts "Please make your move"
+input = gets.chomp
+index = input_to_index(input)
+move(board, index, "X")
 
+display_board(board)
 # Code your CLI Here

@@ -1,5 +1,10 @@
-#!/usr/bin/env ruby
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
-require_relative '../lib/move.rb'
+puts "Welcome to Tic Tac Toe!"
+puts "Please enter 1-9:"
+input = gets.strip
 
-# Code your CLI Here
+index = input_to_index(input)
+
+move(board, index)
+display_board(board)

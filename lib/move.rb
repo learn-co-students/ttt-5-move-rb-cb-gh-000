@@ -7,3 +7,15 @@ def display_board(board)
 end
 
 # code your input_to_index and move method here!
+
+def input_to_index (input)
+  if input.nil? || input.to_i < 1 || input.to_i > 9
+    -1
+  else
+    input.to_i - 1
+  end
+end
+
+def move board, index, content = 'X'
+  board[index] = content
+end

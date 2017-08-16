@@ -6,4 +6,12 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-# code your input_to_index and move method here!
+def input_to_index(input)
+# convert input to integer and subtract 1.
+input.to_i - 1
+# users count from 1, Ruby from 0
+end
+
+def move(board, index, char = "X")
+  board[index] = char
+end

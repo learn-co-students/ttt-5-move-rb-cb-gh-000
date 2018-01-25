@@ -7,3 +7,14 @@ def display_board(board)
 end
 
 # code your input_to_index and move method here!
+def input_to_index(input)
+  value = input.to_i - 1
+  if value > 8 then
+    value = -1
+  end
+  value
+end
+
+def move(board, idx, value="X")
+  board[idx] = value
+end

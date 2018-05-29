@@ -6,4 +6,7 @@ require_relative '../lib/move.rb'
 puts "Welcome to Tic Tac Toe!"
 puts "Where would you like to go?"
 pos=gets.chomp
-input_to_index(pos)
+index=input_to_index(pos)
+board=Array.new
+b=move(board,index)
+display_board(b)

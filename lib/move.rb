@@ -9,5 +9,10 @@ end
 # code your input_to_index and move method here!
   def input_to_index(pos)
     i=pos.to_i-1
-    puts i
+    return i
   end
+
+ def move (board,index,value="X")
+   board[index]=value
+   return board
+ end

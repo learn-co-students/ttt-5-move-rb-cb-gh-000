@@ -7,6 +7,6 @@ puts "Welcome to Tic Tac Toe!"
 puts "Where would you like to go?"
 pos=gets.chomp
 index=input_to_index(pos)
-board=Array.new
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 b=move(board,index)
 display_board(b)

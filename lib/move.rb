@@ -16,5 +16,5 @@ end
 
 
 def move(board, input, value="X")
-  board[input.to_i] = value
+  board[input.to_i - 1] = value
 end

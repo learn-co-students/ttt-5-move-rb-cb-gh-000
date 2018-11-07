@@ -11,4 +11,3 @@ input = gets.strip
 input_to_index
 move(board,input_to_index,character = "X")
 #display_board(board)
-

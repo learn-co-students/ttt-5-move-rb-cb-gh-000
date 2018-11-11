@@ -2,7 +2,7 @@
 
 require_relative '../lib/move.rb'
 
-# Code your CLI Here
+# Code your CLI Here IT WONT SUBMIT !!!
 board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 puts "Welcome to Tic Tac Toe!"
 puts "Where would you like to go?"

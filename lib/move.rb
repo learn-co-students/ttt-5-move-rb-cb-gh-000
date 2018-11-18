@@ -1,9 +1,36 @@
-def display_board(board)
-  puts " #{board[0]} | #{board[1]} | #{board[2]} "
-  puts "-----------"
-  puts " #{board[3]} | #{board[4]} | #{board[5]} "
-  puts "-----------"
-  puts " #{board[6]} | #{board[7]} | #{board[8]} "
+def display_board(places)
+  board_row_templates = [
+    [' ', ' ', ' ', '|', ' ', ' ', ' ', '|', ' ', ' ', ' '],
+    '-----------',
+  ]
+
+  places_counter = 0
+
+  (0..4).each_with_index do |r|
+    row = board_row_templates[r % 2]
+
+    # Row dividers
+    puts row if row.class == String
+
+    # Content row - inject X/Os before this
+    if row.class == Array
+      cur_row = row
+      cur_row[1] = places[places_counter + 0].gsub(/^$/, ' ')
+      cur_row[5] = places[places_counter + 1].gsub(/^$/, ' ')
+      cur_row[9] = places[places_counter + 2].gsub(/^$/, ' ')
+
+      places_counter += 3
+
+      puts cur_row.join ''
+    end
+  end
 end
 
 # code your input_to_index and move method here!
+def input_to_index(input)
+  index = input.to_i - 1
+end
+
+def move(board, index, player = 'X')
+  board[index] = player
+end

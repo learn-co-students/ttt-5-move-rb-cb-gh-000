@@ -7,3 +7,12 @@ def display_board(board)
 end
 
 # code your input_to_index and move method here!
+def input_to_index(index)
+  return -1 if index.to_i.eql? 0
+  raise ArgumentError if (index.to_i - 1) < 0
+  index.to_i - 1
+end
+
+def move(array,input_to_index,value = 'X')
+  array[input_to_index] = value
+end

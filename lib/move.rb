@@ -6,4 +6,13 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-# code your input_to_index and move method here!
+
+def input_to_index(n)
+  n = n.to_i - 1
+end
+
+
+def move(array, index, token="X")
+  array[index] = token
+  # puts "The element at index #{index} of array 'board' is set to the value #{token}"
+end

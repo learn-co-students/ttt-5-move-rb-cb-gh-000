@@ -2,4 +2,11 @@
 
 require_relative '../lib/move.rb'
 
+puts "Welcome to Tic Tac Toe!\n
+Where would you like to go?"
+
+index = gets.chomp.strip
+i = input_to_index(index)
+move(Array.new(9," ") ,i , "X")
+
 # Code your CLI Here

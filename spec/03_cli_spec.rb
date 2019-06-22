@@ -4,7 +4,7 @@ describe './bin/move executing a CLI Application' do
   it 'defines a board variable' do
     allow($stdout).to receive(:puts)
     allow(self).to receive(:gets).and_return("1")
-    allow(self).to receive(:move)
+    allow(self).to receive(:move1)
 
     board = get_variable_from_file("./bin/move", "board")
 
@@ -43,7 +43,7 @@ describe './bin/move executing a CLI Application' do
     allow($stdout).to receive(:puts)
 
     allow(self).to receive(:gets).and_return('1')
-    expect(self).to receive(:move).with(anything, 0, any_args), "Make sure `bin/move` is passing the index, not the input to the `#move` method."
+    expect(self).to receive(:move1).with(anything, 0, any_args), "Make sure `bin/move` is passing the index, not the input to the `#move` method."
 
     run_file("./bin/move")
   end

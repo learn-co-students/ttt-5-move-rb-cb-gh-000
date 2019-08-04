@@ -11,6 +11,6 @@ def input_to_index(number)
   (number.to_i) - 1
 end
 
-def move(wall,num,player="X")
-  wall[num] = player
+def move(board,num,player="X")
+  board[num] = player
 end

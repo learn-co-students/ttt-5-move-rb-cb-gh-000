@@ -5,5 +5,11 @@ def display_board(board)
   puts "-----------"
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
+x=gets.strip
+
+
+
 
 # code your input_to_index and move method here!
+def input_to_index(board,x)
+  board[x]='X'

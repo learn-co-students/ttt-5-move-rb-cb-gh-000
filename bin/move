@@ -5,6 +5,7 @@ board=[" "," "," "," "," "," "," "," "," "]
 puts "Welcome to Tic Tac Toe!"
 puts "Where would you like to go?"
 x=gets.strip
-move(board,x.to_i,"X")
+num=input_to_index(x)
+move(board,num,"X")
 display_board(board)
 # Code your CLI Here

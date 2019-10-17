@@ -64,9 +64,26 @@ describe './lib/move.rb' do
       move(board, 5, "O")
       move(board, 6, "X")
       move(board, 7, "X")
-      move(board, 8, "O")      
+      move(board, 8, "O")
 
       expect(board).to eq(["X", "O", "X", "O", "X", "O", "X", "X", "O"])
+      def number_adder(n)
+  n += 10
+end
+
+def array_adder(a)
+  a << "new thing at the end of the array"
+end
+
+x = 10
+puts "Before call #{x}"
+number_adder(x)
+puts "After call: #{x}: Holy moly, unchanged!"
+
+z = [1, 'hi', "Byron"]
+puts "Before call #{z}"
+array_adder(z)
+puts "After call #{z}: Holy moly, *changed*!"
     end
   end
 end

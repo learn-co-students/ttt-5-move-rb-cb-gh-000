@@ -7,3 +7,11 @@ def display_board(board)
 end
 
 # code your input_to_index and move method here!
+def input_to_index(masuk)
+  tes=masuk.to_i
+  tes=tes-1
+  return tes
+end
+def move(board,poskarakter,plkar="X")
+  board[poskarakter]=plkar
+end

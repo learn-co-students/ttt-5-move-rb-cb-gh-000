@@ -1,5 +1,5 @@
 require_relative "../lib/move.rb"
-
+require_relative "./spec_helper.rb"
 describe './bin/move executing a CLI Application' do
   it 'defines a board variable' do
     allow($stdout).to receive(:puts)
@@ -32,7 +32,7 @@ describe './bin/move executing a CLI Application' do
     allow($stdout).to receive(:puts)
 
     allow(self).to receive(:gets).and_return("1")
-    
+
     expect(self).to receive(:input_to_index).and_return(0)
 
     run_file("./bin/move")
